@@ -14,7 +14,8 @@ pipeline {
         }
     stage('run test') {
             steps {
-                sh'source venv/bin/activate'
+                sh'make run'
+                sh 'source venv/bin/activate'
                 sh'pytest test'
             }
         }
